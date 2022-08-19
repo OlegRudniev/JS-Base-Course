@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Work 2, point 6 from Main</title>
+</head>
+<body>
+    <script>//function - обявление (в данном случае функции), power - имя (функции), val и pow - аргументы самой функции (они могут называться как угодно, например x, y...)       
+        function recursive(){
+            var a = parseInt(prompt("введите целое число а - заданное число"));
+            var b = parseInt(prompt("введите целое число b - степень"));
+            function power(val,pow){
+                if(val == 0||isNaN(val)||isNaN(pow)){
+                    return "ошибка ввода"
+                }
+                return val**pow;
+            }
+            alert("1:"+a+"2:"+b+"результат"+power(a,b));
+
+        }
+    </script>
+
+    <button type="button" onclick="recursive()">
+Запуск Script 
+    </button>
+
+</body>
+</html>

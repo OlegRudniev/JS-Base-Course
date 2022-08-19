@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+
+
+  function mathOperation(arg1, arg2, operation){
+            var arg1 = parseInt(prompt("введите значение arg1"));
+            /*var arg1 = +prompt("введите значение arg1");// унарное сложение +prompt определяет prompt типом number, можно было бы сделать и так:var arg1 = parseInt(prompt("введите значение arg1"))*/
+            var arg2 = parseInt(prompt("введите значение arg1"));// что бы было наглядно написанное в предыдущей строке
+            var operation = prompt("введите одно из арифметических действий + - / *");
+            var resultMath;
+            switch(operation){
+                case "+":
+                    function addition(arg1, arg2, operation){
+                        return arg1+arg2;
+                    }
+                        resultMath=addition(arg1, arg2);
+                        break;
+                        case "-":
+                    function subtraction(arg1, arg2, operation){
+                        return arg1-arg2;
+                    }
+                        resultMath=subtraction(arg1, arg2);
+                        break;
+                        case "/":
+                    function devision(arg1, arg2, operation){
+                        return arg1+arg2;
+                    }
+                        resultMath=devision(arg1, arg2);
+                        break;
+                        case "*":
+                    function multiplication(arg1, arg2, operation){
+                        return arg1*arg2;
+                    }
+                        resultMath=multiplication(arg1, arg2);
+                        break;
+            }
+            alert("значение переменной arg1 = "+arg1+"\r\n значение переменной arg2 = "+arg2+"\r\n результат равен "+resultMath)
+            
+        }
+    </script>
+    <button type="button" onclick="mathOperation()">
+        запустить script
+    </button>
+</body>
+</html>
