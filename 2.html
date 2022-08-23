@@ -76,7 +76,7 @@ document
   /*
   7. Удалите атрибут type у элемента с классом "dropdown-toggle".
    */
-
+document.querySelector('.dropdown-toggle').removeAttribute('type');
 
   /*
   8. Выведите в консоль все имеющиеся атрибуты и их значения тега у которого
@@ -84,7 +84,12 @@ document
   Вывод каждого атрибута и значений должен выглядеть следующим образом (пример):
   Атрибут "class" содержит значение "btn btn-secondary dropdown-toggle"
    */
-
+const atr = document
+.querySelector('.btn.dropdown-toggle')
+.atr;
+for(const attrib of atr){
+  console.log(`атрибут"${attrib.name}" содержит значение"${attrib.value}"`);
+}
 
 </script>
 </body>
