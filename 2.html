@@ -84,11 +84,11 @@ document.querySelector('.dropdown-toggle').removeAttribute('type');
   Вывод каждого атрибута и значений должен выглядеть следующим образом (пример):
   Атрибут "class" содержит значение "btn btn-secondary dropdown-toggle"
    */
-const atr = document
+const attributes = document
 .querySelector('.btn.dropdown-toggle')
-.atr;
-for(const attrib of atr){
-  console.log(`атрибут"${attrib.name}" содержит значение"${attrib.value}"`);
+.attributes;
+for(const attribute of attributes){
+  console.log(`атрибут"${attribute.name}" содержит значение"${attribute.value}"`);
 }
 
 </script>
