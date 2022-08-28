@@ -37,13 +37,35 @@
   1. При наведении на любую из звезд, данной звезде должен ставиться класс
   golden, также такой класс должен ставиться всем звездам до нее слева.
   */
-
+document.querySelector('.stars_container')
+.addEventListener('mouseover', s => {
+  if(!s.target.classList.contains('fas')){
+    return;
+  }
+  let star = s.target;
+  do{
+star.classList.add('golden');
+star = star.previousElementSibling; 
+}while(star);
+  }
+);
 
   /*
   2. Когда мы уводим курсор мыши от звезды, все поставленные классы из первого
   задания должны быть удалены.
    */
-
+   document.querySelector('.stars_container')
+.addEventListener('mouseout', s => {
+  if(!s.target.classList.contains('fas')){
+    return;
+  }
+  let star = s.target;
+  do{
+star.classList.remove('golden');
+star = star.previousElementSibling; 
+}while(star);
+  }
+);
 
   /*
   3. Когда мы переводим мышь от одной звезды к другой, у нас могут мигать
@@ -51,7 +73,20 @@
   Можем ли мы это исправить? Если да, то предложите решение.
   */
 
-
+//Промигивание происходит в связи с тем, что между тегами/элементами i есть пробелы за счет переноса строки 
+/* Варианты исправления: Вариант 1. Записать все теги i слитно, без переноса строк. (<div class="stars_container">
+  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>) Вариант 2. Можем добавить к классу fas margin right -5px (<style>
+    i {
+      font-size: 50px;
+    }
+    .fas{
+      margin-right: -5px;
+    }
+    .golden {
+      color: gold;
+    }
+  </style>) */
 </script>
 </body>
 </html>
